@@ -20,3 +20,9 @@ def count_elements(array)
     name.merge ({:count => array.count{|element| element[:name] == name[:name]}})
 end
 end
+
+def merge_data (keys, data)
+  keys.collect do |key|
+    key.merge (data[0][key[:first_name]].to_h)
+  end 
+  end
