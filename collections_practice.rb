@@ -31,4 +31,15 @@ def merge_data (keys, data)
     array.select {|element| element[:temperature] == "cool"}
   end
 
-  
+  def organize_schools(schools)
+    organized_schools ={}
+    schools.each do |actual_school, info|
+      info.each do |place, location|
+      if organized_schools.has_key? (location)
+        organized_schools [location] << actual_school
+      else organized_schools[location] = [actual_school]
+      end
+    end
+  end
+      organized_schools
+    end
