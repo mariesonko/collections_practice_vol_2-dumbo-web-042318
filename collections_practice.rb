@@ -24,5 +24,9 @@ end
 def merge_data (keys, data)
   keys.collect do |key|
     key.merge (data[0][key[:first_name]].to_h)
-  end 
   end
+  end
+
+  def find_cool (array)
+    array.select {|element| element[:temperature] == "cool"}
+  end 
