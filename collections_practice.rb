@@ -28,5 +28,17 @@ def merge_data (keys, data)
   end
 
   def find_cool (array)
-    array.find {|element| element[:temperature] == "cool"}
+    array.select {|element| element[:temperature] == "cool"}
   end
+
+  def organize_schools(schools)
+    organized_schools ={}
+    schools.each do |actual_school, location|
+      if organized_schools[location] include? location
+        organized_schools [location] << actual_school
+      else organized_schools[location] = [actual_school]
+      end
+    end
+  end
+      organized_schools
+    end
