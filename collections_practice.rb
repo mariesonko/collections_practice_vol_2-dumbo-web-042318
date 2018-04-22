@@ -1,3 +1,3 @@
 def begins_with_r (array)
- array.all ? {|element| element.start_with ? "r"}
+ array.all ? {|lang| lang.start_with ? "r"}
 end
