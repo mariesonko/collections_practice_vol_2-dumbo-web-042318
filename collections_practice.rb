@@ -16,7 +16,7 @@ end
 
 def count_elements(array)
   names = array.uniq
-  name.collect do |name|
+  names.collect do |name|
   name.merge {count: array.count{ |element| element[:name] == name [:name]}}
 end
-end 
+end
